@@ -1,5 +1,14 @@
 # CPPND: Program a Concurrent Traffic Simulation
 
+## setup
+mkdir build
+cd build
+export OpenCV_DIR=~/class/udacity/c++/concurrency/opencv/build
+cmake ..
+make
+
+## The original README starts here...
+
 <img src="data/traffic_simulation.gif"/>
 
 This is the project for the fourth course in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213): Concurrency. 
