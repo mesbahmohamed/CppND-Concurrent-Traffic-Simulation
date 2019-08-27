@@ -4,6 +4,7 @@
 mkdir build
 cd build
 export OpenCV_DIR=~/class/udacity/c++/concurrency/opencv/build
+sudo apt-get install libgtk2.0-dev pkg-config
 cmake ..
 make
 
