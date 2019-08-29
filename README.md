@@ -1,12 +1,13 @@
 # CPPND: Program a Concurrent Traffic Simulation
 
-## setup
-mkdir build
-cd build
-export OpenCV_DIR=~/class/udacity/c++/concurrency/opencv/build
-sudo apt-get install libgtk2.0-dev pkg-config
-cmake ..
-make
+## Ubuntu - setup OpenCV 4.1:
+1. Download OpenCV, cd to opencv
+2. mkdir build
+3. cd build
+4. export OpenCV_DIR=~/class/udacity/c++/concurrency/opencv/build
+5. sudo apt-get install libgtk2.0-dev pkg-config
+6. cmake ..
+7. make
 
 ## The original README starts here...
 
