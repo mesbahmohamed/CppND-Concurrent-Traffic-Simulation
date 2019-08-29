@@ -85,15 +85,14 @@ void Intersection::addVehicleToQueue(std::shared_ptr<Vehicle> vehicle)
     ftrVehicleAllowedToEnter.wait();
     lck.lock();
     std::cout << "Intersection #" << _id << ": Vehicle #" << vehicle->getID() << " is granted entry." << std::endl;
-    
+
     // FP.6b : use the methods TrafficLight::getCurrentPhase and TrafficLight::waitForGreen to block the execution until the traffic light turns green.
-    if (_trafficLight.getCurrentPhase() == TrafficLightPhase::green) {
-        return;
-    } else {
+    if (_trafficLight.getCurrentPhase() == TrafficLightPhase::red) {
         _trafficLight.waitForGreen();
     }
+    lck.unlock();  // this line is not technically necessary because this 'unique_lock',
+                   // will unlock when this goes out of scope anyway.
 
-    lck.unlock(); // TODO is this going to create a deadlock?
 }
 
 void Intersection::vehicleHasLeft(std::shared_ptr<Vehicle> vehicle)
