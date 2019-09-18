@@ -1,5 +1,7 @@
 # CPPND: Program a Concurrent Traffic Simulation
 
+## Starter code from: https://github.com/udacity/CppND-Program-a-Concurrent-Traffic-Simulation
+
 ## Ubuntu - setup OpenCV 4.1:
 1. Download OpenCV, cd to opencv
 2. mkdir build
